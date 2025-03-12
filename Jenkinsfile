@@ -10,9 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh '''
-                g++ -o PES1UG22AM143-1 working.cpp
-                '''
+                sh 'g++ -o PES1UG22AM143-1 working.cpp'
             }
         }
 
@@ -27,8 +25,8 @@ pipeline {
                 sh '''
                 git config --global user.email "2003singhsamar@example.com"
                 git config --global user.name "Samar Singh"
-                git add program.cpp
-                git commit -m "Added working C++ file"
+                git add working.cpp
+                git commit -m "Updated working C++ file"
                 git push origin main
                 '''
             }
