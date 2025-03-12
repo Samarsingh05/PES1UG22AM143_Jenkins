@@ -23,14 +23,15 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                git config --global user.email "2003singhsamar@example.com"
-                git config --global user.name "Samar Singh"
-                git add working.cpp
-                git commit -m "Updated working C++ file"
-                git push origin main
+                    git config --global user.email "2003singhsamar@example.com"
+                    git config --global user.name "Samar Singh"
+                    git add .
+                    git commit -m "Updated working C++ file"
+                    git push origin main
                 '''
             }
         }
+
     }
 
     post {
